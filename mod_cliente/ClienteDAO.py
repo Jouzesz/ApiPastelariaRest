@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from mod_cliente.Cliente import Cliente
 
 router = APIRouter()
 
@@ -12,12 +13,12 @@ def get_cliente(id: int):
     return {"msg": "get um executado"}, 200
 
 @router.post("/cliente/", tags=["Cliente"])
-def post_cliente():
-    return {"msg": "post executado"}, 200
+def post_cliente(f: Cliente):
+    return {"msg": "post executado", "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 200
 
 @router.put("/cliente/{id}", tags=["Cliente"])
-def put_cliente(id: int):
-    return {"msg": "put executado"}, 201
+def put_cliente(id: int, f: Cliente):
+    return {"msg": "put executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 201
 
 @router.delete("/cliente/{id}", tags=["Cliente"])
 def delete_cliente(id: int):
