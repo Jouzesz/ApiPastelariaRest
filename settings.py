@@ -25,7 +25,6 @@ DB_PASS = quote(os.getenv("DB_PASS"))
 # Ajusta STR_DATABASE conforme gerenciador escolhido
 if DB_SGDB == 'sqlite': # SQLite
     STR_DATABASE = f"sqlite:///{DB_NAME}.db"
-
 elif DB_SGDB == 'mysql': # MySQL
     import pymysql
     STR_DATABASE = f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?charset=utf8mb4"
