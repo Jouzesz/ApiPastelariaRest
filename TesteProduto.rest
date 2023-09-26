@@ -11,7 +11,8 @@ content-type: application/json
 {
     "nome" : "pao",
     "descricao" : "qiwfiowqgopkwqg",
-    "valor_unitario" : 15
+    "valor_unitario" : 15,
+    "foto" : "0101"
 }
 
 ### Verbo PUT – atualiza
@@ -21,7 +22,8 @@ content-type: application/json
 {
     "nome" : "queijo",
     "descricao" : "qdwdqwd",
-    "valor_unitario" : 5
+    "valor_unitario" : 5,
+    "foto" : "0100"
 }
 
 ### Verbo DELETE - excluir
